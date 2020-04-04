@@ -1,0 +1,12 @@
+{% extends 'base.html' %}<!-- Se base sur le template de base et insère dedans ce qui suit -->
+
+{% block content %}
+    <h2>Page de connection</h2>
+    <!-- on envoie le form vers l'url connection -->
+    <form action={% url 'connection' %} method="post">
+        {% csrf_token %}
+        <!-- form.as_p affiche les composants dans des balises <p> -->
+        {{ form.as_p }}
+        <button type="submit">Se connecter</button>
+    </form>
+{% endblock %}

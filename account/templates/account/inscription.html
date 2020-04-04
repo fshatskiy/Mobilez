@@ -1,0 +1,11 @@
+{% extends 'base.html' %}<!-- Se base sur le template de base et insère dedans ce qui suit -->
+
+{% block content %}
+    <h2>Page d'inscription</h2>
+    <form method="post" action={% url 'inscription' %}>
+        {% csrf_token %}
+        <!-- form.as_p affiche les composants dans des balises <p> -->
+        {{ form.as_p }}
+        <button type="submit">Créer</button>
+    </form>
+{% endblock %}
