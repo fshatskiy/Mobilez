@@ -7,16 +7,7 @@
 </head>
 <body>
     <h1>MOBILEZ</h1>
-    <a href="{% url 'accueil' %}">Accueil</a> / <!-- "accueil" est le nom qu'on a donné dans Mobilez/urls.py -->
-    <a href="{% url 'inscription' %}">Inscription</a> /
-    <a href="{% url 'connection' %}">Connection</a> /
-    <form method="post" action="{% url 'deconnexion' %}">
-        <!-- pour chaque requête post : pour la sécurité : csrf_token -->
-        {% csrf_token %}
-        <button type="submit">Déconnexion</button>
-    </form>
     <hr>
-    {% block content %}
-    {% endblock %}
+    {% block content %}{% endblock %}
 </body>
 </html>
