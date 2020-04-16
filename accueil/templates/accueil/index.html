@@ -1,19 +1,8 @@
 {% extends 'base.html' %}<!-- Se base sur le template de base et insère dedans ce qui suit -->
 
 {% block content %}
-    <h2>Page d'accueil</h2>
+    <h2>Page d'accueil après avoir été co</h2>
+    <!-- vérifier si-'il faut enlever socialaccount-->
     {% load socialaccount %}
-    {% if user.is_authenticated %}
         <p>Welcome {{ user.username }} !</p>
-    {% else %}
-        <form method="post" action={% url 'connection' %}>
-        {% csrf_token %}
-        <!-- form.as_p affiche les composants dans des balises <p> -->
-        {{ form.as_p }}
-        <button type="submit">Se connecter</button>
-        </form> ou
-        <a href="{% provider_login_url 'facebook' method="oauth2" %}">Facebook</a> ou
-        <a href="{% provider_login_url 'google' method="oauth2" %}">Google</a> ou
-        <a href="{% url 'inscription' %}">Créer un compte</a>
-    {% endif %}
 {% endblock %}

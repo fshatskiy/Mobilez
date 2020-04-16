@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
 
     'accueil',
+    'comptes',
 ]
 
 SOCIALACCOUNT_PROVIDERS = {
