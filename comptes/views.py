@@ -5,8 +5,10 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 # Create your views here.
 def Inscription_view(request):
+    # form = CreateUserForm()
     # if there is data in the form that was sent = POST req
     if request.method == 'POST':
+        # stocker pseudo et mdp dans 'form'
         form = UserCreationForm(request.POST)
         if form.is_valid():
             # on récupère les données du form et on les sauvegarde dans 'user'
