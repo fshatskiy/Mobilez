@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'accueil',
     'comptes',
 ]
-
+# django allauth
 SOCIALACCOUNT_PROVIDERS = {
     'facebook': {
         'METHOD': 'oauth2',
@@ -92,10 +92,17 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SITE_ID = 1
-
+# à vérif
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_EMAIL_REQUIRED = 'true'
+ACCOUNT_UNIQUE_EMAIL = 'true'
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = 'true'
+ACCOUNT_SESSION_REMEMBER = True
 
 LOGIN_REDIRECT_URL = 'accueil'
+ACCOUNT_LOGOUT_REDIRECT_URL = "connexion"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
