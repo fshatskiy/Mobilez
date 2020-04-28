@@ -13,7 +13,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import djongo, allauth
+import allauth
+import djongo
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -38,13 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
-
     'accueil',
     'comptes',
 ]
@@ -154,12 +153,12 @@ DATABASES = {
              },
             'NAME': 'mobilez-DB',
             'CLIENT': {
-                    'host': 'mongodb+srv://fshatskiy:MongoH1236987412369%2F@mobilezcluster1-piwai.mongodb.net/test?retryWrites=true&w=majority',
+                    'host': 'mongodb+srv://fshatskiy:Temporary72%2F@mobilezcluster1-piwai.mongodb.net/test?retryWrites=true&w=majority',
                 'username': 'fshatskiy',
-                'password': 'MongoH1236987412369%2F',
+                'password': 'Temporary72%2F',
             }
         }
-    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

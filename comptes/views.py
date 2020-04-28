@@ -14,7 +14,7 @@ def Inscription_view(request):
             # on récupère les données du form et on les sauvegarde dans 'user'
             user = form.save()
             # l'utilisateur se co
-            login(request, user)
+            # login(request, user)
             return redirect('accueil')
     else:
         # if there is no data = GET req (envoie un form vide)
@@ -31,9 +31,9 @@ def Connexion_view(request):
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
             # on récupère les données du form et on les sauvegarde dans la var 'user'
-            user = form.get_user()
+            # user = form.get_user()
             # on le co
-            login(request, user)
+            # login(request, user)
             return redirect('accueil')
     # GET request
     else:
