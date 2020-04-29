@@ -39,13 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'accueil',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
-    'accueil',
-    'comptes',
 ]
 # django allauth
 SOCIALACCOUNT_PROVIDERS = {
@@ -69,7 +68,7 @@ SOCIALACCOUNT_PROVIDERS = {
             'updated_time',
         ],
         'EXCHANGE_TOKEN': True,
-        'LOCALE_FUNC': 'path.to.callable',
+        'LOCALE_FUNC': lambda request: 'en_US',
         'VERIFIED_EMAIL': False,
         'VERSION': 'v2.12',
     },
@@ -91,17 +90,21 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SITE_ID = 1
-# à vérif
-ACCOUNT_EMAIL_VERIFICATION = 'none'
-ACCOUNT_EMAIL_REQUIRED = 'true'
-ACCOUNT_UNIQUE_EMAIL = 'true'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# à modifier en cas de besoin
+ACCOUNT_EMAIL_VERIFICATION = True
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = 'true'
 ACCOUNT_SESSION_REMEMBER = True
-
+# redicrection après avoir été connecté
 LOGIN_REDIRECT_URL = 'accueil'
-ACCOUNT_LOGOUT_REDIRECT_URL = "connexion"
+# redicrection vers la page de connexion après avoir été déconnecté
+ACCOUNT_LOGOUT_REDIRECT_URL = "/"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
