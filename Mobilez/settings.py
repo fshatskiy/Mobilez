@@ -46,6 +46,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
 ]
+
+# ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
+
 # django allauth
 SOCIALACCOUNT_PROVIDERS = {
     'facebook': {
