@@ -1,0 +1,22 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.col {
+    margin-top: 10em;
+}
+.img-fluid {
+    max-height: 100px;
+
+}
+.navbar {
+    margin-bottom: 1em;
+}
+.navbar-nav {
+    text-align: center;
+}
+
+/*.isAuthenticated{*/
+/*    text-align: center;*/
+/*}*/
