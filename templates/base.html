@@ -9,8 +9,8 @@
 {#    navbar ------------------------#}
     <nav class="navbar fixed-top navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="">
-                <img class="img-fluid" alt="Mobilez" src="{% static "/img/MOBILEZ.png" %}" >
+            <a class="navbar-brand" href=""><b>Mobilez</b>
+{#                <img class="img-fluid" alt="Mobilez" src="{% static "/img/MOBILEZ.png" %}" >#}
             </a>
             {% if messages %}
                 <div class="messages">
@@ -43,7 +43,8 @@
                     </li>
                     {% endif %}
                 </ul>
-                <!-- Links -->
+            </div>
+        </div>
     </nav>
     {% block extra_head %}
     {% endblock %}
@@ -63,7 +64,7 @@
     </div>
 </div>
 </body>
-<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+<footer id="sticky-footer" class="py-4 fixed-bottom bg-dark text-white-50">
     <div class="container text-center">
     <small>© 2020 Copyright : Mobilez Louvain-la-Neuve</small>
     </div>
