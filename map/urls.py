@@ -1,7 +1,7 @@
 from django.urls import path, include
-from accueil import views
+from map import views
 
 urlpatterns = [
     # mobilez.be/
-    path('map/', views.Map_view, name="map"),
+    path('', views.Map_view, name="map"),
 ]
