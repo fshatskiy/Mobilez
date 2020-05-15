@@ -1,1 +1,1 @@
-web: gunicorn mobilez.wsgi
+web: gunicorn Mobilez.wsgi
