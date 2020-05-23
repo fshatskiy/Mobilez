@@ -1,0 +1,196 @@
+{% extends 'base.html' %}<!-- Se base sur le template de base et insère dedans ce qui suit -->
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "/css/index.css" %}">
+    <p>explication du projet</p></br>
+    <p>Choisissez un des parcours de découverte des arbres remarquables :</p></br>
+
+    {# ---------------------------------LISTE DES PARCOURS---------------------------------------#}
+    <div class="list-group">
+        <a href="#exampleModal1" class="list-group-item list-group-item-action flex-column align-items-start" data-toggle="modal">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Parcours des Sciences</h5>
+                {# <small>3 days ago</small>#}
+            </div>
+            <p class="mb-1">Parcours magnifique dan lequel vous trouverez ce type d'arbres</p>
+            <small>Donec id elit non mi porta.</small>
+        </a>
+        {#    Modal 1 #}
+        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Parcours des Sciences</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Ajouter photo
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                        <button type="button" class="btn btn-success" onclick="window.location.href = '{% url 'sciences_map' %}';">Démarrer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {#    Fin Modal 1 #}
+
+        <a href="#exampleModal2" class="list-group-item list-group-item-action flex-column align-items-start" data-toggle="modal">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Parcours du cyclotron</h5>
+                {# <small>3 days ago</small>#}
+            </div>
+            <p class="mb-1">Parcours magnifique dan lequel vous trouverez ce type d'arbres</p>
+            <small>Donec id elit non mi porta.</small>
+        </a>
+        {#    Modal 2 #}
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Parcours du cyclotron</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Ajouter photo
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                        <button type="button" class="btn btn-success" onclick="window.location.href = '{% url 'cyclotron_map' %}';">Démarrer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {#    Fin Modal 2 #}
+
+        <a href="#exampleModal3" class="list-group-item list-group-item-action flex-column align-items-start" data-toggle="modal">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Parcours du lac</h5>
+                {# <small>3 days ago</small>#}
+            </div>
+            <p class="mb-1">Parcours magnifique dan lequel vous trouverez ce type d'arbres</p>
+            <small>Donec id elit non mi porta.</small>
+        </a>
+        {#    Modal 3 #}
+        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Parcours du lac</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Ajouter photo
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                        <button type="button" class="btn btn-success" onclick="window.location.href = '{% url 'lac_map' %}';">Démarrer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {#    Fin Modal 3 #}
+
+        <a href="#exampleModal4" class="list-group-item list-group-item-action flex-column align-items-start" data-toggle="modal">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Parcours du jardin botanique</h5>
+                {# <small>3 days ago</small>#}
+            </div>
+            <p class="mb-1">Parcours magnifique dan lequel vous trouverez ce type d'arbres</p>
+            <small>Donec id elit non mi porta.</small>
+        </a>
+        {#    Modal 4 #}
+        <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Parcours du jardin botanique</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Ajouter photo
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                        <button type="button" class="btn btn-success" onclick="window.location.href = '{% url 'jardin_botanique_map' %}';">Démarrer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {#    Fin Modal 4 #}
+
+        <a href="#exampleModal5" class="list-group-item list-group-item-action flex-column align-items-start" data-toggle="modal">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Parcours du parc de Moulinsart</h5>
+                {# <small>3 days ago</small>#}
+            </div>
+            <p class="mb-1">Parcours magnifique dan lequel vous trouverez ce type d'arbres</p>
+            <small>Donec id elit non mi porta.</small>
+        </a>
+        {#    Modal 5 #}
+        <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Parcours du parc de Moulinsart</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Ajouter photo</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                        <button type="button" class="btn btn-success" onclick="window.location.href = '{% url 'parc_map' %}';">Démarrer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {#    Fin Modal 5 #}
+    </div>
+    </br>
+
+    {# ---------------------------------PARCOURS LE PLUS PROCHE---------------------------------------#}
+    <div class="list-group listeProche">
+        <a href="#exampleModal6" class="list-group-item list-group-item-action flex-column align-items-start" data-toggle="modal">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Parcours le plus proche de vous</h5>
+                {# <small>3 days ago</small>#}
+            </div>
+            <h6 class="mb-1">Nom du parcours</h6>
+            <small>Donec id elit non mi porta.</small>
+        </a>
+        {#    Modal 6 #}
+        <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Parcours le plus proche de vous</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Ajouter photo</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                        <button type="button" class="btn btn-success" onclick="window.location.href = '{% url 'cyclotron_map' %}';">Démarrer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {#    Fin Modal 6 #}
+    </div></br></br></br></br>
+
+
+{% endblock %}
