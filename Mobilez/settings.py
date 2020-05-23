@@ -160,7 +160,7 @@ DATABASES = {
              },
             'NAME': 'mobilez-DB',
             'CLIENT': {
-                'host': 'mongodb+srv://fshatskiy:Temporary72%2F@mobilezcluster1-piwai.mongodb.net/test?retryWrites=true&w=majority',
+    'host': 'mongodb+srv://fshatskiy:Temporary72%2F@mobilezcluster1-piwai.mongodb.net/test?retryWrites=true&w=majority',
                 'username': 'fshatskiy',
                 'password': 'Temporary72%2F',
             }
