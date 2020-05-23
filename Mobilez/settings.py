@@ -210,4 +210,3 @@ STATICFILES_DIRS = (
 
 django_heroku.settings(locals())
 
-DATABASE_URL = 'mongodb+srv://herokudb:Temporary72%21@mobilezcluster1-piwai.mongodb.net/test?retryWrites=true&w=majority'
