@@ -30,7 +30,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                        <button type="button" class="btn btn-success">Démarrer</button>
+                        <button type="button" class="btn btn-success" onclick="window.location.href = '{% url 'sciences_map' %}';">Démarrer</button>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                        <button type="button" class="btn btn-success">Démarrer</button>
+                        <button type="button" class="btn btn-success" onclick="window.location.href = '{% url 'cyclotron_map' %}';">Démarrer</button>
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                        <button type="button" class="btn btn-success">Démarrer</button>
+                        <button type="button" class="btn btn-success" onclick="window.location.href = '{% url 'lac_map' %}';">Démarrer</button>
                     </div>
                 </div>
             </div>
@@ -120,7 +120,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                        <button type="button" class="btn btn-success">Démarrer</button>
+                        <button type="button" class="btn btn-success" onclick="window.location.href = '{% url 'jardin_botanique_map' %}';">Démarrer</button>
                     </div>
                 </div>
             </div>
@@ -150,7 +150,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                        <button type="button" class="btn btn-success">Démarrer</button>
+                        <button type="button" class="btn btn-success" onclick="window.location.href = '{% url 'parc_map' %}';">Démarrer</button>
                     </div>
                 </div>
             </div>
@@ -184,14 +184,13 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                        <button type="button" class="btn btn-success">Démarrer</button>
+                        <button type="button" class="btn btn-success" onclick="window.location.href = '{% url 'cyclotron_map' %}';">Démarrer</button>
                     </div>
                 </div>
             </div>
         </div>
         {#    Fin Modal 6 #}
-    </div></br>
+    </div></br></br></br></br>
 
 
-    <p class="recherche">barre de recherche des parcours (form : get request)</p>
 {% endblock %}
