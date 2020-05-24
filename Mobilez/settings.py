@@ -144,26 +144,10 @@ WSGI_APPLICATION = 'Mobilez.wsgi.application'
 
 
 DATABASES = {
-        'default': {
-            'ENGINE': 'djongo',
-            'ENFORCE_SCHEMA': True,
-            'LOGGING': {
-                'version': 1,
-                'loggers': {
-                    'djongo': {
-                        'level': 'DEBUG',
-                        'propogate': False,
-                    }
-                },
-             },
-            'NAME': 'mobilez-DB',
-            'CLIENT': {
-    'host': 'mongodb+srv://rodrigue:Temporary72%21@mobilezcluster1-piwai.mongodb.net/test?retryWrites=true&w=majority',
-                'username': 'rodrigue',
-                'password': 'Temporary72!',
-            }
-
-        }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
+    }
 }
 
 # Password validation
