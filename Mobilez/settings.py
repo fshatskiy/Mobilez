@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '57*v-0+h89@x1*s6=5(w0naa)@5_*7zp=k_^i0z#73kp-)wl!@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'FAlSE'
 
-ALLOWED_HOSTS = ['mobilez.herokuapp.com']
+ALLOWED_HOSTS = ['https://mobilez.herokuapp.com']
 
 # Application definition
 
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
+    'corsheaders',
 ]
 
 # ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
@@ -108,10 +109,10 @@ LOGIN_REDIRECT_URL = 'accueil'
 ACCOUNT_LOGOUT_REDIRECT_URL = "/"
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -204,7 +205,9 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFileStorage'
 
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'Mobilez/static'),
+    os.path.join(BASE_DIR, 'static'),
 )
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 django_heroku.settings(locals())
