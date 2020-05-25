@@ -24,7 +24,7 @@ SECRET_KEY = '57*v-0+h89@x1*s6=5(w0naa)@5_*7zp=k_^i0z#73kp-)wl!@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'FAlSE'
 
-ALLOWED_HOSTS = ['https://mobilez.herokuapp.com']
+ALLOWED_HOSTS = ['mobilez.herokuapp.com']
 
 # Application definition
 
