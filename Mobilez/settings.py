@@ -195,7 +195,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'Mobilez/static'),
+    os.path.join(BASE_DIR, 'Mobilez/static/css'),
 )
 
 CORS_ORIGIN_ALLOW_ALL = True
