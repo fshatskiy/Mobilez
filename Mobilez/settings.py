@@ -24,7 +24,7 @@ SECRET_KEY = '57*v-0+h89@x1*s6=5(w0naa)@5_*7zp=k_^i0z#73kp-)wl!@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'FAlSE'
 
-ALLOWED_HOSTS = ['mobilez.herokuapp.com']
+ALLOWED_HOSTS = ['mobilez.herokuapp.com', 'localhost']
 
 # Application definition
 
@@ -143,7 +143,27 @@ WSGI_APPLICATION = 'Mobilez.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-
+DATABASES = {
+        'default': {
+            'ENGINE': 'djongo',
+            'ENFORCE_SCHEMA': True,
+            'LOGGING': {
+                'version': 1,
+                'loggers': {
+                    'djongo': {
+                        'level': 'DEBUG',
+                        'propogate': False,
+                    }
+                },
+             },
+            'NAME': 'mobilez-DB',
+            'CLIENT': {
+                    'host': 'mongodb+srv://fshatskiy:Temporary72%21@mobilezcluster1-piwai.mongodb.net/test?retryWrites=true&w=majority',
+                'username': 'ffshatskiy',
+                'password': 'Temporary72!',
+            }
+        }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -180,7 +200,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFileStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 STATICFILES_DIRS = (
