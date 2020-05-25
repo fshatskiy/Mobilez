@@ -195,9 +195,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'Mobilez/static'),
 )
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-#django_heroku.settings(locals())
