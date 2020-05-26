@@ -109,6 +109,7 @@ LOGIN_REDIRECT_URL = 'accueil'
 # redicrection vers la page de connexion après avoir été déconnecté
 ACCOUNT_LOGOUT_REDIRECT_URL = "/"
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
