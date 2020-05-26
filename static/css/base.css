@@ -1,3 +1,8 @@
+html, body {
+    height: 100%;
+}
+
+
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -6,10 +11,7 @@
 .col {
     margin-top: 10em;
 }
-.img-fluid {
-    max-height: 100px;
 
-}
 .navbar {
     margin-bottom: 1em;
 }

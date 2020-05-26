@@ -1,0 +1,17 @@
+html, body {
+    background-image: url("background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.form {
+    background-color:rgba(0, 0, 0, 0.5);
+    padding: 3em;
+    border-radius: 50px;
+    margin-left: 25%;
+    margin-right: 25%;
+    color: white;
+}
+
