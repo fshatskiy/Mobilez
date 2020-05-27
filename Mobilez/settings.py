@@ -15,7 +15,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import allauth
 import djongo
-
+import django_heroku
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '57*v-0+h89@x1*s6=5(w0naa)@5_*7zp=k_^i0z#73kp-)wl!@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'FALSE'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['mobilez.herokuapp.com', 'localhost']
 
 # Application definition
 
