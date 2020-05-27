@@ -12,6 +12,7 @@ class Accueil(models.Model):
     map_url_data = models.TextField(validators=[URLValidator()])
 
     image = models.ImageField(blank=True)
+    qr_code = models.ImageField(blank=True)
 
     # nom du champ dans l'interface d'admin
     class Meta:
