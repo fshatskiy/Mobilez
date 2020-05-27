@@ -1,10 +1,10 @@
 {% extends 'base.html' %}<!-- Se base sur le template de base et insère dedans ce qui suit -->
 {% block content %}
     {% load static %}
-    <link rel="stylesheet" href="{% static "/css/index.css" %}">
-    <p>explication du projet</p></br>
+    <section class="accueilTitle">
+    <h1>Les parcours</h1></br>
     <p>Choisissez un des parcours de découverte des arbres remarquables :</p></br>
-
+    </section>
     {# ---------------------------------LISTE DES PARCOURS---------------------------------------#}
     <div class="list-group">
         {% for accueil in accueil %}
@@ -18,7 +18,7 @@
                 <div class="d-flex flex-row">
                   <div class="p-2"><img class="rounded float-left rounded-pill" src="{% if accueil.image %} {{ accueil.image.url }} {% endif %}"  alt="parcours du lac" width="200" height="200"></div>
                   <div class="p-2"><p class="mb-1">{{ accueil.resume }}</p></div>
-{#                  <div class="p-2"><small>Donec id elit non mi porta.</small></div>#}
+                  <div class="p-2"><small>QR code disponible</small></div>
                 </div>
 
             </a>
