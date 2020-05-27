@@ -2,6 +2,8 @@ from django.urls import path, include
 from accueil import views
 
 urlpatterns = [
-    # mobilez.be/
-    path('', views.Accueil_view, name="accueil"),
+    # mobilez.be/accueil
+    path('', views.accueil_index, name="accueil"),
+    # mobilez.be/accueil/#numeroPK
+    path("<int:pk>/", views.accueil_detail, name="accueil_detail"),
 ]

@@ -1,3 +1,18 @@
+body, html {
+  height: auto;
+}
+
+html, body {
+    background: url("background.jpg") no-repeat fixed 100%;
+    height: 100%;
+}
+
+
+.accueilTitle{
+  color: white;
+}
+
+
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -6,16 +21,14 @@
 .col {
     margin-top: 10em;
 }
-.img-fluid {
-    max-height: 100px;
 
-}
 .navbar {
     margin-bottom: 1em;
 }
 .navbar-nav {
     text-align: center;
 }
+
 
 /*.isAuthenticated{*/
 /*    text-align: center;*/
