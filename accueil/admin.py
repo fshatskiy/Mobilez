@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import Accueil
 
-# Register your models here.
+
+class AccueilAdmin(admin.ModelAdmin):
+    list_display = ('title', 'resume', 'description', 'map_url_data', 'image')
+
+
+admin.site.register(Accueil, AccueilAdmin)
