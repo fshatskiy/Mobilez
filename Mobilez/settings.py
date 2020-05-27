@@ -159,16 +159,27 @@ WSGI_APPLICATION = 'Mobilez.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 
+
 DATABASES = {
-'default': {
-    'ENGINE': 'djongo',
-    'NAME': 'mobilez-DB',
-
-    'HOST': 'mongodb+srv://rodrigue:Temporary72%21@mobilezcluster1-piwai.mongodb.net/test?retryWrites=true&w=majority',
-
-    'USER': 'rodrigue',
-    'PASSWORD': 'Temporary72!',
-
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'mobilez-DB',
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': 'mongodb+srv://rodrigue:Temporary72%21@mobilezcluster1-piwai.mongodb.net/mobilez-DB'
+                    '?retryWrites=true&w=majority',
+            'username': 'rodrigue',
+            'password': 'Temporary72!',
+        },
+        'LOGGING': {
+            'version': 1,
+            'loggers': {
+                'djongo': {
+                    'level': 'DEBUG',
+                    'propogate': False,
+                }
+            },
+        },
     }
 }
 
