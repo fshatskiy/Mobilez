@@ -94,8 +94,8 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
+SITE_ID = 1
 
-SITE_ID = 2
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
@@ -166,9 +166,9 @@ DATABASES = {
         'NAME': 'mobilez-DB',
         'ENFORCE_SCHEMA': False,
         'CLIENT': {
-            'host': 'mongodb+srv://rodrigue:Temporary72%21@mobilezcluster1-piwai.mongodb.net/mobilez-DB'
+            'host': 'mongodb+srv://fshatskiy:Temporary72%21@mobilezcluster1-piwai.mongodb.net/mobilez-DB'
                     '?retryWrites=true&w=majority',
-            'username': 'rodrigue',
+            'username': 'fshatskiy',
             'password': 'Temporary72!',
         },
         'LOGGING': {
