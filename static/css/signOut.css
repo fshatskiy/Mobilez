@@ -1,4 +1,4 @@
-.form {
+.signOut {
     background-color:rgba(0, 0, 0, 0.5);
     padding: 3em;
     border-radius: 50px;
@@ -7,7 +7,6 @@
     color: white;
 }
 
-.form:hover {
+.signOur:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
-
