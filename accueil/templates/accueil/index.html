@@ -1,10 +1,10 @@
 {% extends 'base.html' %}<!-- Se base sur le template de base et insère dedans ce qui suit -->
 {% block content %}
     {% load static %}
-    <link rel="stylesheet" href="{% static "/css/index.css" %}">
-    <p>explication du projet</p></br>
+    <section class="accueilTitle">
+    <h1>Les parcours</h1></br>
     <p>Choisissez un des parcours de découverte des arbres remarquables :</p></br>
-
+    </section>
     {# ---------------------------------LISTE DES PARCOURS---------------------------------------#}
     <div class="list-group">
         <a href="#exampleModal1" class="list-group-item list-group-item-action flex-column align-items-start" data-toggle="modal">
@@ -12,8 +12,8 @@
                 <h5 class="mb-1">Parcours des Sciences</h5>
                 {# <small>3 days ago</small>#}
             </div>
-            <p class="mb-1">Parcours magnifique dan lequel vous trouverez ce type d'arbres</p>
-            <small>Donec id elit non mi porta.</small>
+            <p class="mb-1">Parcours dans le Biéreau Louvaniste</p>
+            <small>QR code disponible</small>
         </a>
         {#    Modal 1 #}
         <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -26,7 +26,8 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        Ajouter photo
+                        {% load static %}
+                        <img src="{% static "img/parcoursSciences.PNG" %}" width=95%>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
@@ -42,8 +43,8 @@
                 <h5 class="mb-1">Parcours du cyclotron</h5>
                 {# <small>3 days ago</small>#}
             </div>
-            <p class="mb-1">Parcours magnifique dan lequel vous trouverez ce type d'arbres</p>
-            <small>Donec id elit non mi porta.</small>
+            <p class="mb-1">Parcours autour du Cyclotron de Louvain-La-Neuve</p>
+            <small>QR code disponible</small>
         </a>
         {#    Modal 2 #}
         <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -56,7 +57,8 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        Ajouter photo
+                        {% load static %}
+                        <img src="{% static "img/parcoursCyclotron.PNG" %}" width=95%>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
@@ -72,8 +74,8 @@
                 <h5 class="mb-1">Parcours du lac</h5>
                 {# <small>3 days ago</small>#}
             </div>
-            <p class="mb-1">Parcours magnifique dan lequel vous trouverez ce type d'arbres</p>
-            <small>Donec id elit non mi porta.</small>
+            <p class="mb-1">Parcours autour du lac de Louvain-La-Neuve</p>
+            <small>QR code disponible</small>
         </a>
         {#    Modal 3 #}
         <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -86,7 +88,8 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        Ajouter photo
+                        {% load static %}
+                        <img src="{% static "img/parcoursLac.png" %}">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
@@ -102,8 +105,8 @@
                 <h5 class="mb-1">Parcours du jardin botanique</h5>
                 {# <small>3 days ago</small>#}
             </div>
-            <p class="mb-1">Parcours magnifique dan lequel vous trouverez ce type d'arbres</p>
-            <small>Donec id elit non mi porta.</small>
+            <p class="mb-1">Parcours à travers les jardins botaniques de Louvain-La-Neuve</p>
+            <small>QR code disponible</small>
         </a>
         {#    Modal 4 #}
         <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -116,7 +119,8 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        Ajouter photo
+                        {% load static %}
+                        <img src="{% static "img/parcoursJardin.PNG" %}" width=95%>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
@@ -132,8 +136,8 @@
                 <h5 class="mb-1">Parcours du parc de Moulinsart</h5>
                 {# <small>3 days ago</small>#}
             </div>
-            <p class="mb-1">Parcours magnifique dan lequel vous trouverez ce type d'arbres</p>
-            <small>Donec id elit non mi porta.</small>
+            <p class="mb-1">Parcours dans les Bruyères louvaniste</p>
+            <small>QR code disponible</small>
         </a>
         {#    Modal 5 #}
         <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -146,7 +150,8 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Ajouter photo</p>
+                        {% load static %}
+                        <img src="{% static "img/parcoursMoulinsart.PNG" %}" width=95%>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
@@ -167,7 +172,7 @@
                 {# <small>3 days ago</small>#}
             </div>
             <h6 class="mb-1">Nom du parcours</h6>
-            <small>Donec id elit non mi porta.</small>
+            <small>QR code disponible</small>
         </a>
         {#    Modal 6 #}
         <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -191,6 +196,5 @@
         </div>
         {#    Fin Modal 6 #}
     </div></br></br></br></br>
-
 
 {% endblock %}
