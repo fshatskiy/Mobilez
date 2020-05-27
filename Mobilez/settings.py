@@ -27,7 +27,7 @@ SECRET_KEY = '57*v-0+h89@x1*s6=5(w0naa)@5_*7zp=k_^i0z#73kp-)wl!@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -93,20 +93,22 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-SITE_ID = 1
+SITE_ID = 2
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # à modifier en cas de besoin
 ACCOUNT_EMAIL_VERIFICATION = True
 ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = False
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = 'true'
 ACCOUNT_SESSION_REMEMBER = True
 # redicrection après avoir été connecté
-LOGIN_REDIRECT_URL = 'accueil'
+LOGIN_REDIRECT_URL = 'accueil/'
+
 # redicrection vers la page de connexion après avoir été déconnecté
 ACCOUNT_LOGOUT_REDIRECT_URL = "/"
 
@@ -145,26 +147,50 @@ WSGI_APPLICATION = 'Mobilez.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 
+# DATABASES = {
+#         'default': {
+#             'ENGINE': 'djongo',
+#             'ENFORCE_SCHEMA': True,
+#             'LOGGING': {
+#                 'version': 1,
+#                 'loggers': {
+#                     'djongo': {
+#                         'level': 'DEBUG',
+#                         'propogate': False,
+#                     }
+#                 },
+#              },
+#             'NAME': 'mobilez-test',
+#             'CLIENT': {
+#                     'host': 'mongodb+srv://fshatskiy:Temporary72%21@mobilezcluster1-piwai.mongodb.net/mobilez-test'
+#                             '?retryWrites=true&w=majority',
+#                 'username': 'fshatskiy',
+#                 'password': 'Temporary72!',
+#             }
+#         }
+# }
+
 DATABASES = {
-        'default': {
-            'ENGINE': 'djongo',
-            'ENFORCE_SCHEMA': True,
-            'LOGGING': {
-                'version': 1,
-                'loggers': {
-                    'djongo': {
-                        'level': 'DEBUG',
-                        'propogate': False,
-                    }
-                },
-             },
-            'NAME': 'mobilez-DB',
-            'CLIENT': {
-                    'host': 'mongodb+srv://fshatskiy:Temporary72%2F@mobilezcluster1-piwai.mongodb.net/test?retryWrites=true&w=majority',
-                'username': 'fshatskiy',
-                'password': 'Temporary72%2F',
-            }
-        }
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'mobilez-DB',
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': 'mongodb+srv://fshatskiy:Temporary72%21@mobilezcluster1-piwai.mongodb.net/mobilez-DB'
+                    '?retryWrites=true&w=majority',
+            'username': 'fshatskiy',
+            'password': 'Temporary72!',
+        },
+        'LOGGING': {
+            'version': 1,
+            'loggers': {
+                'djongo': {
+                    'level': 'DEBUG',
+                    'propogate': False,
+                }
+            },
+        },
+    }
 }
 
 # Password validation
