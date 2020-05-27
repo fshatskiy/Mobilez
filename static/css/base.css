@@ -1,6 +1,15 @@
+body, html {
+  height: auto;
+}
+
 html, body {
+    background-image: url("background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100%;
 }
+
 
 .accueilTitle{
   color: white;
