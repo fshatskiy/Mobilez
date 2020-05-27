@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from allauth.account.views import LoginView
+from allauth.account.views import LoginView, ConfirmEmailView
 from allauth.account import views as allauth_views
 
 urlpatterns = [
