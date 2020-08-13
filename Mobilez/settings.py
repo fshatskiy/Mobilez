@@ -16,9 +16,10 @@ import os
 import allauth
 import djongo
 import django_heroku
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/img/')
-MEDIA_URL = '/static/img/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'img/')
+MEDIA_URL = '/img/'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -26,9 +27,10 @@ MEDIA_URL = '/static/img/'
 SECRET_KEY = '57*v-0+h89@x1*s6=5(w0naa)@5_*7zp=k_^i0z#73kp-)wl!@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'FALSE'
+DEBUG = 'TRUE'
 
-ALLOWED_HOSTS = ['mobilez.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['mobilez.herokuapp.com', 'localhost']
 
 # Application definition
 
